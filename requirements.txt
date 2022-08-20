@@ -1,0 +1,13 @@
+# Human detector requirements
+# Usage: pip install -r requirements.txt
+
+# Base ----------------------------------------
+opencv-python
+numpy
+Pillow
+imutils
+shapely
+tensorflow
+tk
+
+
