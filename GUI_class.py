@@ -196,7 +196,7 @@ class GUI_Humandetector:
             detectFrame = drawedFrame[y1:y2, x1:x2, :]
 
             # Get the detected points
-            detectedPoints = detector.detectBoundigBox(detectFrame, threshold=0.5)
+            detectedPoints = detector.detectBoundingBox(detectFrame, threshold=0.5)
 
             if len(detectedPoints) > 0: # Deteted human in frame
                 polyPoints_calib = []
