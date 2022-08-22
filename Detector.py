@@ -25,7 +25,7 @@ class Detector:
 
         print("Model " + self.modelName + " loaded sucessfully...") 
 
-    def detectBoundigBox(self, frame, threshold = 0.5):
+    def detectBoundingBox(self, frame, threshold = 0.5):
 
         points = []
 
