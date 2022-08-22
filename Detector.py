@@ -1,3 +1,4 @@
+from statistics import mode
 import time, cv2, os
 from cv2 import waitKey
 import tensorflow as tf
@@ -8,15 +9,15 @@ from tensorflow.python.keras.utils.data_utils import get_file
 class Detector:
     def __init__(self):
         self.readClasses(classesFilePath="coco.names")
-        self.loadModel()
+        self.loadModel(modelName="ssd_mobilenet_v2_fpnlite_320x320_coco17_tpu-8")
 
     def readClasses(self, classesFilePath):
         with open(classesFilePath, 'r') as f:
             self.classesList = f.read().splitlines()
  
-    def loadModel(self):
+    def loadModel(self, modelName):
 
-        self.modelName = "ssd_mobilenet_v2_fpnlite_320x320_coco17_tpu-8"
+        self.modelName = modelName
         self.cacheDir = "./pretrained_models"
         print("Loading model " + self.modelName)
 
